@@ -33,13 +33,13 @@ public class TCPServer {
     }
 
     /**
-     * Default constructor that sets the port number to be 0, the max queue length
-     * to be 1 and the IP address to the the local host
+     * Default constructor that calls defined constructor with port number 0,
+     * max queue length 1 and the IP address of the local host
      * @throws Exception 
      */
     
     public TCPServer() throws Exception {
-            this.server = new ServerSocket(0, 1, InetAddress.getLocalHost());
+        this(0, 1, InetAddress.getLocalHost());
     }
     
     /**
